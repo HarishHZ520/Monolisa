@@ -11,7 +11,11 @@ const productSchema = new mongoose.Schema({
         required: [true, 'This product must have a price']
     },
     rating: Number,
-    description: String
+    description: String,
+    manufacturedBy: String,
+    manufacturerRating: Number,
+    shippingFrom: String,
+    inStock: Number,
 })
 
 export const Saree = mongoose.model('Sarees', productSchema)

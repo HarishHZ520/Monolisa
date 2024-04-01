@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.ts",
-    "start:prod": "cross-env NODE_ENV=production nodemon server.ts"
+    "start:prod": "cross-env NODE_ENV=production nodemon server.ts",
+    "prepare": "husky install"
   },
   "author": "Harish",
   "license": "ISC",
@@ -29,12 +30,6 @@
     "cross-env": "^7.0.3",
     "husky": "^9.0.11",
     "ts-node": "^10.9.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "echo \"Pushing from backend...\""
-    }
   },
   "lint-staged": {
     "*.js": "eslint"
